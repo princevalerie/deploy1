@@ -1,16 +1,14 @@
 import streamlit as st
 import pickle
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
+
 
 # Assuming 'decision_tree_model' is your Decision Tree model
 with open('decisiontree_model.pkl', 'wb') as file:
-    pickle.dump(DecisionTreeClassifier, file)
+    pickle.dump(DecisionTree, file)
 with open('knn_model.pkl', 'wb') as file:
-    pickle.dump(KNeighborsClassifier, file)
+    pickle.dump(best_knn, file)
 with open('nvb_model.pkl', 'wb') as file:
-    pickle.dump(GaussianNB, file)
+    pickle.dump(classifier, file)
 
 # Repeat for other models (knn_model, nvb_model)
 
