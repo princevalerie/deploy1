@@ -1,18 +1,18 @@
 import streamlit as st
 import pickle
 
-with open('decisiontree_model.pkl', 'wb') as file:
-    pickle.dump(DecisionTree, file)
+with open('decisiontree_model.pkl', 'rb') as file:
+    loaded_model = DecisionTree
 
-with open('knn_model.pkl', 'wb') as file:
-    pickle.dump(best_knn, file)
+with open('knn_model.pkl', 'rb') as file:
+    loaded_model = best_knn
     
-with open('nvb_model.pkl', 'wb') as file:
-    pickle.dump(classifier, file)
+with open('nvb_model.pkl', 'rb') as file:
+    loaded_model = classifier
 
-diabetes_model_dtr = pickle.load(open('decisiontree_model.pkl', 'rb'))
-diabetes_model_knn = pickle.load(open('knn_model.pkl', 'rb'))
-diabetes_model_nvb = pickle.load(open('nvb_model.pkl', 'rb'))
+diabetes_model_dtr = pickle.load('decisiontree_model.pkl', 'rb')
+diabetes_model_knn = pickle.load('knn_model.pkl', 'rb')
+diabetes_model_nvb = pickle.load('nvb_model.pkl', 'rb')
 
 st.title("Prediksi diabetes menggunakan 3 model machine learning")
 
