@@ -2,17 +2,6 @@ import streamlit as st
 import pickle
 
 
-# Assuming 'decision_tree_model' is your Decision Tree model
-with open('decisiontree_model.pkl', 'wb') as file:
-    pickle.dump(DecisionTreeClassifier, file)
-with open('knn_model.pkl', 'wb') as file:
-    pickle.dump(KNeighborsClassifier, file)
-with open('nvb_model.pkl', 'wb') as file:
-    pickle.dump(GaussianNB, file)
-
-# Repeat for other models (knn_model, nvb_model)
-
-
 diabetes_model_dtr = pickle.load(open('decisiontree_model.pkl', 'rb'))
 diabetes_model_knn = pickle.load(open('knn_model.pkl', 'rb'))
 diabetes_model_nvb = pickle.load(open('nvb_model.pkl', 'rb'))
