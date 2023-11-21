@@ -1,6 +1,8 @@
 import streamlit as st
 import pickle
 
+with open('decisiontree_model.pkl', 'wb') as file:
+    pickle.dump({'example': 'DecisionTree'}, file)
 
 diabetes_model_dtr = pickle.load(open('decisiontree_model.pkl', 'rb'))
 diabetes_model_knn = pickle.load(open('knn_model.pkl', 'rb'))
