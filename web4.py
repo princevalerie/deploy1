@@ -1,9 +1,6 @@
 import streamlit as st
 import pickle
-import sklearn
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.naive_bayes import GaussianNB
+
 
 # Assuming 'decision_tree_model' is your Decision Tree model
 with open('decisiontree_model.pkl', 'wb') as file:
