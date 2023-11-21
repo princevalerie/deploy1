@@ -4,6 +4,12 @@ import pickle
 with open('decisiontree_model.pkl', 'wb') as file:
     pickle.dump('DecisionTree', file)
 
+with open('knn_model.pkl', 'wb') as file:
+    pickle.dump('best_knn', file)
+    
+with open('nvb_model.pkl', 'wb') as file:
+    pickle.dump('classifier', file)
+
 diabetes_model_dtr = pickle.load(open('decisiontree_model.pkl', 'rb'))
 diabetes_model_knn = pickle.load(open('knn_model.pkl', 'rb'))
 diabetes_model_nvb = pickle.load(open('nvb_model.pkl', 'rb'))
